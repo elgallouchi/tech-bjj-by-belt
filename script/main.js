@@ -1,12 +1,9 @@
-let currentData = [];
 let currentBjjData = [];
 
 const fetchData = async () => {
   try {
-    const data = await fetch("../data.json");
-    const bjjData = await fetch("../bjj-data.json");
+    const bjjData = await fetch("./script/bjj-data.json");
     currentBjjData = await bjjData.json();
-    currentData = await data.json();
   } catch (error) {
     console.log(error);
   }
